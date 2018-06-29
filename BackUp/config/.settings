@@ -1,0 +1,31 @@
+{
+    "projectName": "BackUp",
+    "username": "admavx@telcel.com.dc",
+    "id": "ce13ff10-7bee-11e8-8472-111eff4655ba",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://telcel-dev--DC.cs18.my.salesforce.com",
+    "workspace": "C:\\Users\\ToshAvanxo\\Documents\\Workspace\\DCT",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "ApprovalProcess",
+        "AuraDefinitionBundle",
+        "CustomLabels",
+        "CustomMetadata",
+        "CustomObject",
+        "EmailTemplate",
+        "EscalationRules",
+        "Flow",
+        "FlowDefinition",
+        "HomePageComponent",
+        "HomePageLayout",
+        "Layout",
+        "Settings",
+        "StaticResource",
+        "Workflow"
+    ]
+}

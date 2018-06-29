@@ -1,0 +1,42 @@
+<apex:page lightningStylesheets="true" standardController="Cliente__c" showHeader="false" sidebar="false" extensions="DCT_SalesForceInformation_ctr" action="{!ActualizaFuerzaVetaWs}">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <head>
+      <apex:includeScript value="/support/console/41.0/integration.js"/>
+      <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+      <apex:includeScript value="/soap/ajax/40.0/connection.js"/>
+      <apex:slds />
+    </head>
+    <body class="slds-scope">
+      <apex:outputPanel id="main">
+        <div style="width: 100%; margin: 0 auto;">
+          <apex:outputPanel rendered="{!lstResponsable.size <> 0}">
+            <table class="slds-table slds-table_bordered">
+              <thead>
+                <tr class="slds-text-title_caps">
+                  <apex:repeat value="{!$ObjectType.Responsable__c.FieldSets.DCT_SalesForceInformation_fieldSet}" var="field">
+                    <th scope="col" style="text-align: center;">
+                      <div class="slds-truncate" title="{!field.label}">{!field.label}</div>
+                    </th>
+                  </apex:repeat>
+                </tr>
+              </thead>
+              <tbody>
+                <apex:repeat value="{!lstResponsable}" var="iterator">
+                  <tr class="slds-text-title_caps">
+                    <apex:repeat value="{!$ObjectType.Responsable__c.FieldSets.DCT_SalesForceInformation_fieldSet}" var="field">
+                      <td data-label="{!iterator[field]}" style="text-align: center;">
+                        <div class="slds-truncate" title="{!iterator[field]}">
+                          <apex:outputField value="{!iterator[field]}"/>
+                        </div>
+                      </td>
+                    </apex:repeat>
+                  </tr>
+                </apex:repeat>
+              </tbody>
+            </table>
+          </apex:outputPanel>
+        </div>
+      </apex:outputPanel>
+    </body> 
+  </html>
+</apex:page>
